@@ -1,0 +1,51 @@
+{
+  "name": "steal-front-matter",
+  "version": "0.1.0",
+  "description": "Front matter for a Jupyter steal-based application.",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "dependencies": {},
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^2.2.5",
+    "rimraf": "^2.4.2",
+    "steal": "^0.12.3",
+    "testee": "^0.2.2",
+    "typedoc": "^0.3.11",
+    "typescript": "^1.6.2"
+  },
+  "scripts": {
+    "clean": "rimraf lib && rimraf test/build && rimraf test/coverage",
+    "build:src": "tsc --project src",
+    "build:test": "tsc --project test/src",
+    "build": "npm run build:src && npm run build:test",
+    "docs": "rimraf docs/api && typedoc --options scripts/tdoptions.json",
+    "postinstall": "npm dedupe",
+    "prepublish": "npm run build",
+    "test:chrome": "testee tests/index.html --browsers chrome",
+    "test:firefox": "testee tests/index.html --browsers firefox",
+    "test:ie": "testee tests/index.html --browsers ie",
+    "test": "npm run test:firefox"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blink1073/steal-front-matter.git"
+  },
+  "system": {
+    "npmIgnore": [ "devDependencies" ]
+  },
+  "files": [
+    "lib/*.js",
+    "lib/*.css",
+    "lib/*.d.ts"
+  ],
+  "keywords": [
+    "steal"
+  ],
+  "author": "Project Jupyter",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/blink1073/steal-front-matter/issues"
+  },
+  "homepage": "https://github.com/blink1073/steal-front-matter"
+}
