@@ -22,9 +22,9 @@
     "docs": "rimraf docs/api && typedoc --options scripts/tdoptions.json",
     "postinstall": "npm dedupe",
     "prepublish": "npm run build",
-    "test:chrome": "testee tests/index.html --browsers chrome",
-    "test:firefox": "testee tests/index.html --browsers firefox",
-    "test:ie": "testee tests/index.html --browsers ie",
+    "test:chrome": "testee tests/index.html --browsers chrome -c test/testee.json",
+    "test:firefox": "testee tests/index.html --browsers firefox -c test/testee.json",
+    "test:ie": "testee tests/index.html --browsers ie -c test/testee.json",
     "test": "npm run test:firefox"
   },
   "repository": {
