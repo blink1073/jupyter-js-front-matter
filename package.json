@@ -1,16 +1,23 @@
 {
-  "name": "steal-front-matter",
+  "name": "jupyter-js-front-matter",
   "version": "0.1.0",
-  "description": "Front matter for a Jupyter steal-based application.",
+  "description": "Front matter for a Jupyter JS repository",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "dependencies": {},
   "devDependencies": {
+    "browserify-istanbul": "^0.2.1",
     "expect.js": "^0.3.1",
     "mocha": "^2.2.5",
+    "karma": "^0.13.9",
+    "karma-browserify": "^4.3.0",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-coverage": "^0.5.0",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-ie-launcher": "^0.2.0",
+    "karma-mocha": "^0.2.0",
+    "karma-mocha-reporter": "^1.1.1",
     "rimraf": "^2.4.2",
-    "steal": "^0.12.3",
-    "testee": "^0.2.2",
     "typedoc": "^0.3.11",
     "typescript": "^1.6.2"
   },
@@ -22,17 +29,15 @@
     "docs": "rimraf docs/api && typedoc --options scripts/tdoptions.json",
     "postinstall": "npm dedupe",
     "prepublish": "npm run build",
-    "test:chrome": "testee tests/index.html --browsers chrome -c test/testee.json",
-    "test:firefox": "testee tests/index.html --browsers firefox -c test/testee.json",
-    "test:ie": "testee tests/index.html --browsers ie -c test/testee.json",
+    "test:chrome": "karma start --browsers=Chrome test/karma.conf.js",
+    "test:coverage": "karma start test/karma-cov.conf.js",
+    "test:firefox": "karma start --browsers=Firefox test/karma.conf.js",
+    "test:ie": "karma start --browsers=IE test/karma.conf.js",
     "test": "npm run test:firefox"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/blink1073/steal-front-matter.git"
-  },
-  "system": {
-    "npmIgnore": [ "devDependencies" ]
+    "url": "https://github.com/blink1073/jupter-js-front-matter.git"
   },
   "files": [
     "lib/*.js",
@@ -40,12 +45,12 @@
     "lib/*.d.ts"
   ],
   "keywords": [
-    "steal"
+    "jupyter"
   ],
   "author": "Project Jupyter",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/blink1073/steal-front-matter/issues"
+    "url": "https://github.com/blink1073/jupter-js-front-matter/issues"
   },
-  "homepage": "https://github.com/blink1073/steal-front-matter"
+  "homepage": "https://github.com/blink1073/jupter-js-front-matter"
 }
