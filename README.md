@@ -1,12 +1,12 @@
-steal-front-matter
-==================
+jupyter-js-front-matter
+=======================
 
-[![Build Status](https://travis-ci.org/blink1073/steal-front-matter.svg)](https://travis-ci.org/blink1073/steal-front-matter?branch=master)
-[![Coverage Status](https://coveralls.io/repos/blink1073/steal-front-matter/badge.svg?branch=master&service=github)](https://coveralls.io/github/blink1073/steal-front-matter?branch=master)
+[![Build Status](https://travis-ci.org/blink1073/jupyter-js-front-matter.svg)](https://travis-ci.org/blink1073/jupyter-js-front-matter?branch=master)
+[![Coverage Status](https://coveralls.io/repos/blink1073/jupyter-js-front-matter/badge.svg?branch=master&service=github)](https://coveralls.io/github/blink1073/jupyter-js-front-matter?branch=master)
 
-Front matter for a Jupyter steal-based application.
+Front matter for a Jupyter jupyter-js-based application.
 
-[API Docs](http://blink1073.github.io/steal-front-matter/api/)
+[API Docs](http://blink1073.github.io/jupyter-js-front-matter/api/)
 
 
 Package Install
@@ -16,7 +16,7 @@ Package Install
 - [node](http://nodejs.org/)
 
 ```bash
-npm install --save steal-front-matter
+npm install --save jupyter-js-front-matter
 ```
 
 
@@ -28,8 +28,8 @@ Source Build
 - [node](http://nodejs.org/)
 
 ```bash
-git clone https://github.com/blink1073/steal-front-matter.git
-cd steal-front-matter
+git clone https://github.com/blink1073/jupyter-js-front-matter.git
+cd jupyter-js-front-matter
 npm install
 ```
 
@@ -67,18 +67,6 @@ npm run docs
 ```
 
 Navigate to `docs/index.html`.
-
-
-Build Example
--------------
-
-Follow the source build instructions first.
-
-```bash
-npm run build:example
-```
-
-Navigate to `example/index.html`.
 
 
 Supported Runtimes
