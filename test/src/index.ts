@@ -5,7 +5,7 @@
 import expect = require('expect.js');
 
 
-describe('stealjs-front-matter', () => {
+describe('jupyter-js-front-matter', () => {
 
   it('should always pass', () => {
 
