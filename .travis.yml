@@ -6,7 +6,7 @@ env:
   matrix:
     - GROUP=
   global:
-    - GHREPO=github.com/blink1073/steal-front-matter
+    - GHREPO=github.com/blink1073/jupyter-js-front-matter
 install:
   - bash scripts/travis_install.sh
 script:
